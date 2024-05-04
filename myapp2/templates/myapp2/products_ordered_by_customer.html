@@ -1,0 +1,15 @@
+{% extends 'myapp2/base.html' %}
+
+{% block title %}Список заказанных клиентом товаров{% endblock %}
+
+{% block content %}
+    <h1>Список заказанных клиентом товаров</h1>
+    <h4>Заказанные товары клиента за {{ days }} дней</h4>
+    <ul>
+        {% for product in ordered_products %}
+        <li>{{ product.name }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+
